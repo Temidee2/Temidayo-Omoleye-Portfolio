@@ -12,37 +12,135 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+            /* ✅ Fade-in on Load */
+            .fade-in {
+              opacity: 0;
+              transform: translateY(20px);
+              animation: fadeIn 1.2s ease-out forwards;
+            }
+        
+            @keyframes fadeIn {
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+        
+            /* ✅ Slide-in Left */
+            .slide-in-left {
+              animation: slideInLeft 1s ease-out forwards;
+            }
+        
+            @keyframes slideInLeft {
+              from {
+                transform: translateX(-50%);
+                opacity: 0;
+              }
+              to {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
+        
+            /* ✅ Expand on Hover */
+            .expand-hover:hover {
+              transform: scale(1.05);
+            }
+        
+            /* ✅ Pulse effect */
+            .pulse-hover:hover {
+              animation: pulse 1s infinite;
+            }
+        
+            @keyframes pulse {
+              0%, 100% {
+                transform: scale(1);
+              }
+              50% {
+                transform: scale(1.05);
+              }
+            }
+        
+            /* ✅ Smooth Transition */
+            .transition-all {
+              transition: all 0.3s ease-in-out;
+            } 
+                 
         /* ✅ Smooth Transition for Menu */
         #nav-menu {
             transition: all 0.3s ease-in-out;
         }
 
-        /* ✅ Improved Large Screen Layout */
-        @media (min-width: 1024px) {
-            #projects .project-card {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-            #projects .project-card img {
-                width: 40%;
-            }
-            #projects .project-card .project-info {
-                width: 60%;
-                padding-left: 20px;
-            }
-        }
-
+        
         /* ✅ Fix Footer on Large Screens */
         @media (min-width: 1280px) {
             footer {
                 position: relative;
             }
         }
-    </style>
-</head>
-<body class="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-600 text-white">
 
+        /* Large Screen Layout */
+        @media (min-width: 1024px) {
+        #projects .project-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       }
+  
+       #projects .project-card img {
+       width: 40%;
+        }
+  
+     #projects .project-card .project-info {
+      width: 60%;
+      padding-left: 20px;
+        }
+      }
+  
+     /* Medium Devices (Tablets) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+      #projects .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
+  
+      #projects .project-card img {
+      width: 80%;
+      margin-bottom: 1rem;
+     }
+  
+      #projects .project-card .project-info {
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+      }
+    }
+  
+     /* Small Devices (Phones) */
+      @media (max-width: 767px) {
+      #projects .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+      #projects .project-card img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+      #projects .project-card .project-info {
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+       }
+    }
+
+</style>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-600 text-white">
     <!-- ✅ HEADER -->
     <header class="fixed w-full flex justify-between items-center p-5 bg-black bg-opacity-60 backdrop-blur-md shadow-lg z-50">
         <h1 class="text-2xl font-bold text-yellow-400">My Portfolio</h1>
@@ -57,6 +155,7 @@
             <a href="#about" class="hover:text-yellow-400">About</a>
             <a href="#skills" class="hover:text-yellow-400">Skills</a>
             <a href="#projects" class="hover:text-yellow-400">Projects</a>
+            <a href="#projects" class="hover:text-yellow-400">Education</a>
             <a href="#contact" class="hover:text-yellow-400">Contact</a>
         </nav>
     </header>
@@ -156,6 +255,27 @@
             </div>
         </div>
     </section>
+
+    <!-- ✅ EDUCATION BACKGROUND SECTION -->
+  <section id="education" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg text-center fade-in">
+    <h2 class="text-3xl font-bold">Education Background</h2>
+    <p class="mt-4 text-lg md:text-xl">B.Sc. in Chemistry | Obafemi Awolowo University, Nigeria</p>
+    <div class="mt-6">
+      <a href="cv.pdf" download class="bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 pulse-hover transition-all">📄 Download My CV</a>
+    </div>
+  </section>
+
+  <!-- ✅ CERTIFICATION SECTION -->
+  <section id="education" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg text-center fade-in">
+    <h2 class="text-3xl font-bold">Certification</h2>
+    <p class="mt-4 text-lg md:text-xl">Certificate of Completion | Quantum Analytics, Nigeria</p>
+    <p class="mt-2">Specialized in Excel, Power BI, SQL, Python and data visualization.</p>
+    <div class="mt-6">
+      <a href="certificate.png" download class="bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 pulse-hover transition-all">📄 View Certificate</a>
+    </div>
+  </section>
+
+
 
     <!-- ✅ CONTACT FORM -->
     <section id="contact" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg">
