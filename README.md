@@ -49,9 +49,9 @@ This portfolio website was designed and developed to showcase my work and skills
 Temidayo-Omoleye-Portfolio-website/ ├── 
 
 index.html           
-lear_more.html      
+learn_more.html      
 styles.css        
-scripts.js      
+script.js      
 profile.jpg    
 projects.png
 cv.pdf          
