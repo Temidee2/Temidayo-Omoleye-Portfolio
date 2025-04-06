@@ -87,6 +87,7 @@ README.md
 
 6. *Deployment*
    - Deployed the website using GitHub Pages for public access.
+   - GitHub Pages's link to my portfolio webste - https://temidee2.github.io/Temidayo-Omoleye-Portfolio/
 
 ## Installation & Running Locally
 
