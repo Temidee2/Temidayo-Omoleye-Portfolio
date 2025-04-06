@@ -1,308 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temidayo Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temidayo Omoleye | Data Analyst Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+   <!-- ✅ FontAwesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- ✅ Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- ✅ FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-            /* ✅ Fade-in on Load */
-            .fade-in {
-              opacity: 0;
-              transform: translateY(20px);
-              animation: fadeIn 1.2s ease-out forwards;
-            }
-        
-            @keyframes fadeIn {
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-        
-            /* ✅ Slide-in Left */
-            .slide-in-left {
-              animation: slideInLeft 1s ease-out forwards;
-            }
-        
-            @keyframes slideInLeft {
-              from {
-                transform: translateX(-50%);
-                opacity: 0;
-              }
-              to {
-                transform: translateX(0);
-                opacity: 1;
-              }
-            }
-        
-            /* ✅ Expand on Hover */
-            .expand-hover:hover {
-              transform: scale(1.05);
-            }
-        
-            /* ✅ Pulse effect */
-            .pulse-hover:hover {
-              animation: pulse 1s infinite;
-            }
-        
-            @keyframes pulse {
-              0%, 100% {
-                transform: scale(1);
-              }
-              50% {
-                transform: scale(1.05);
-              }
-            }
-        
-            /* ✅ Smooth Transition */
-            .transition-all {
-              transition: all 0.3s ease-in-out;
-            } 
-                 
-        /* ✅ Smooth Transition for Menu */
-        #nav-menu {
-            transition: all 0.3s ease-in-out;
-        }
-
-        
-        /* ✅ Fix Footer on Large Screens */
-        @media (min-width: 1280px) {
-            footer {
-                position: relative;
-            }
-        }
-
-        /* Large Screen Layout */
-        @media (min-width: 1024px) {
-        #projects .project-card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-       }
-  
-       #projects .project-card img {
-       width: 40%;
-        }
-  
-     #projects .project-card .project-info {
-      width: 60%;
-      padding-left: 20px;
-        }
-      }
-  
-     /* Medium Devices (Tablets) */
-      @media (min-width: 768px) and (max-width: 1023px) {
-      #projects .project-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      }
-  
-      #projects .project-card img {
-      width: 80%;
-      margin-bottom: 1rem;
-     }
-  
-      #projects .project-card .project-info {
-      width: 100%;
-      padding-left: 0;
-      text-align: center;
-      }
-    }
-  
-     /* Small Devices (Phones) */
-      @media (max-width: 767px) {
-      #projects .project-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-      #projects .project-card img {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  
-      #projects .project-card .project-info {
-      width: 100%;
-      padding-left: 0;
-      text-align: center;
-       }
-    }
-
-</style>
 </head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>Temidayo</h1>
+    </div>
+    <!-- Navigation with dark/light toggle icon -->
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Dark/Light mode toggle icon -->
+        <li><button class="icon-btn" id="darkModeToggle" title="Toggle Dark/Light Mode">🌓</button></li>
+      </ul>
+    </nav>
+    <!-- Hamburger menu for small screens -->
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </header>
 
-<body class="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-600 text-white">
-    <!-- ✅ HEADER -->
-    <header class="fixed w-full flex justify-between items-center p-5 bg-black bg-opacity-60 backdrop-blur-md shadow-lg z-50">
-        <h1 class="text-2xl font-bold text-yellow-400">My Portfolio</h1>
+  <!-- Hero Section -->
+  <section id="home" class="home-content">
+    <div class="typing-text">
+      <span id="typed-text">Welcome to My Portfolio!</span><span class="cursor">|</span>
+    </div>
+    <div class="highlight-role">Data Analyst</div>
+    <a href="learn_more.html" class="btn">Learn More</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="profile-frame">
+        <img src="profile.png" alt="Profile Picture" />
+      </div>
+      <p>I'm Temidayo Omoleye, A Passionate Data Analyst with expertise in SQL, Python, Power BI, Excel, and Visualization.</p>
+      .</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">Power BI</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Python</div>
+      <div class="skill">Excel</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project">
+        <img src="unicon_company.png" alt="Project 1" />
+        <p>Unicon Company Startup Analysis</p>
+        <a href="https://www.linkedin.com/posts/temidayoomoleye_unicorns-insights-activity-7158831418289106947-BZP5?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" target="_blank" class="btn">Live Demo</a>
+      </div>
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="airline_flightDelay.png" alt="Project 2" />
+        <p>Airline Flight Delay Analysis</p>
+        <a href="https://www.linkedin.com/posts/temidayoomoleye_2015-airline-flight-delay-insights-to-be-activity-7164351634192416768-mBFz?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" target="_blank" class="btn">Live Demo</a>
+      </div>
+      <!-- Project 3 -->
+      <div class="project">
+        <img src="brazil_E-commerce.png" alt="Project 3" />
+        <p>Brazilian E-commerce Public Data Analysis</p>
+        <a href="https://www.linkedin.com/posts/temidayoomoleye_linkedinfam-activity-7160203275395293184-G0qy?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" target="_blank" class="btn">Live Demo</a>
+      </div>
+      <!-- Project 4 -->
+      <div class="project">
+        <img src="shark_attack.png" alt="Project 4" />
+        <p>Shark Attack Analysis</p>
+        <a href="https://www.linkedin.com/posts/temidayoomoleye_dataanalysis-dataanalystintern-dataanalyticsjourney-activity-7159695084555247616-xBvE?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" target="_blank" class="btn">Live Demo</a>
+      </div>
+      </section> 
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-item">
+        <h3>PGD Education</h3>
+        <p>University of Ilorin, Nigeria</p>
+        <a href="cv.pdf"  target="_blank" download class="small-link">Download CV</a>
+    </div>
+
         
-        <!-- 🍔 HAMBURGER MENU BUTTON -->
-        <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
-            ☰
-        </button>
-
-        <!-- 🌍 NAVIGATION MENU -->
-        <nav id="nav-menu" class="hidden md:flex space-x-6 text-lg">
-            <a href="#about" class="hover:text-yellow-400">About</a>
-            <a href="#skills" class="hover:text-yellow-400">Skills</a>
-            <a href="#projects" class="hover:text-yellow-400">Projects</a>
-            <a href="#projects" class="hover:text-yellow-400">Education</a>
-            <a href="#contact" class="hover:text-yellow-400">Contact</a>
-        </nav>
-    </header>
-
-    <!-- ✅ HERO SECTION -->
-    <section class="h-screen flex flex-col items-center justify-center text-center px-6">
-        <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
-            Hello, I'm <span class="text-yellow-400">Temidayo Omoleye</span>
-        </h1>
-        <p class="mt-4 text-lg md:text-xl">A Passionate Data Analyst with expertise in SQL, Python, Power BI, Excel, and Visualization.</p>
-    </section>
-
-    <!-- ✅ ABOUT SECTION -->
-    <section id="about" class="max-w-4xl mx-auto p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg text-center">
-        <img src="profile.png" class="w-32 md:w-48 h-32 md:h-48 rounded-full mx-auto shadow-md border-4 border-yellow-400" alt="Profile Picture">
-        <h2 class="text-3xl font-bold mt-4">About Me</h2>
-        <p class="mt-2 text-lg md:text-xl">I'm a data analyst committed to unlocking the power of data through meticulous analysis and compelling visualization. With expertise in Excel, SQL, Python, and Power BI, I craft data-driven solutions that optimize processes, enhance performance, and reveal hidden patterns crucial for informed decision-making.</p>
-    </section>
-
-    <!-- ✅ SKILLS SECTION -->
-    <section id="skills" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-center">Skills</h2>
-        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-lg">
-            <span class="bg-black bg-opacity-30 p-3 rounded-lg">Python</span>
-            <span class="bg-black bg-opacity-30 p-3 rounded-lg">SQL</span>
-            <span class="bg-black bg-opacity-30 p-3 rounded-lg">Excel</span>
-            <span class="bg-black bg-opacity-30 p-3 rounded-lg">Power BI</span>
-        </div>
-    </section>
-
-
-<!-- ✅ PROJECTS SECTION -->
-    <section id="projects" class="max-w-5xl mx-auto mt-10 space-y-8">
-        <!-- 📈 Project 1-->
-        <div class="project-card p-6 bg-black bg-opacity-20 rounded-lg shadow-md flex flex-col md:flex-row items-center">
-            <img src="airline_flightDelay.png" alt="Airline Flight Delay Analysis" class="rounded-lg shadow-md">
-            <div class="project-info text-center md:text-left mt-4 md:mt-0">
-                <h3 class="text-2xl font-semibold text-yellow-400">Airline Flight Delay Analysis</h3>
-                <p class="text-gray-300 mt-2">The 2015 airline flight data shows predictable monthly and weekly flight volume fluctuations, reveals a specific percentage of delays in Boston, quantifies total cancellations and their causes (weather vs. airline), and identifies the most and least reliable airlines based on on-time departure rates.</p>
-                <div class="mt-3">
-                    <a href="https://www.linkedin.com/posts/temidayoomoleye_2015-airline-flight-delay-insights-to-be-activity-7164351634192416768-mBFz?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" class="text-yellow-400 hover:underline">🔗 Live Demo</a> |
-                    <a href="https://github.com/Temidee2" class="text-yellow-400 hover:underline">💻 GitHub Code</a>
-                </div>
-            </div>
-        </div>
-        <!-- 📈 Project 2: Unicon Company Analysis -->
-        <div class="p-4 bg-black bg-opacity-20 rounded-lg shadow-md flex flex-col md:flex-row items-center">
-            <img src="unicon_company.png" alt="Unicon Company Analysis" class="w-full md:w-1/3 rounded-lg shadow-md">
-            <div class="md:ml-6 text-center md:text-left mt-4 md:mt-0">
-                <h3 class="text-2xl font-semibold text-yellow-400">Unicon Company Startup Analysis</h3>
-                <p class="text-gray-300 mt-2">This Power BI analysis of unicorn companies reveals a global landscape of high-growth potential, quantifying total valuations, company counts, industry diversity, and geographic distribution. By visualizing valuation trends over time and identifying leading countries, industries, and companies, the report highlights key drivers of unicorn creation and investment opportunities. It provides a comprehensive overview of the unicorn phenomenon, showcasing the most significant players and emerging trends in the venture capital market.</p>
-                <div class="mt-3">
-                    <a href="https://www.linkedin.com/posts/temidayoomoleye_unicorns-insights-activity-7158831418289106947-BZP5?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" class="text-yellow-400 hover:underline">🔗 Live Demo</a> |
-                    <a href="https://github.com/Temidee2" class="text-yellow-400 hover:underline">💻 GitHub Code</a>
-                </div>
-            </div>
-        </div>
-              
-        <!-- 📈 Project 3: Brazilian E-commerce Data Analysis -->
-        <div class="p-4 bg-black bg-opacity-20 rounded-lg shadow-md flex flex-col md:flex-row items-center">
-            <img src="brazil_E-commerce.png" alt="Brazilian E-commerce Data Analysis" class="w-full md:w-1/3 rounded-lg shadow-md">
-            <div class="md:ml-6 text-center md:text-left mt-4 md:mt-0">
-                <h3 class="text-2xl font-semibold text-yellow-400">Brazilian E-commerce Public Data Analysis</h3>
-                <p class="text-gray-300 mt-2">The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allow viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers.
-                     Power BI Visualization</p>
-                <div class="mt-3">
-                    <a href="https://www.linkedin.com/posts/temidayoomoleye_linkedinfam-activity-7160203275395293184-G0qy?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" class="text-yellow-400 hover:underline">🔗 Live Demo</a> |
-                    <a href="https://github.com/Temidee2" class="text-yellow-400 hover:underline">💻 GitHub Code</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 📈 Project 4: Shark attack analysis -->
-        <div class="p-4 bg-black bg-opacity-20 rounded-lg shadow-md flex flex-col md:flex-row items-center">
-            <img src="shark_attack.png" alt="Shark Attack Analysis" class="w-full md:w-1/3 rounded-lg shadow-md">
-            <div class="md:ml-6 text-center md:text-left mt-4 md:mt-0">
-                <h3 class="text-2xl font-semibold text-yellow-400">Shark Attack Analysis</h3>
-                <p class="text-gray-300 mt-2">This provides insights into the number of shark attacks from 1900 to 2017, the time of the day this attack happens, and the species of fish engaged in these attacks.
-                </p>
-                <div class="mt-3">
-                    <a href="https://www.linkedin.com/posts/temidayoomoleye_dataanalysis-dataanalystintern-dataanalyticsjourney-activity-7159695084555247616-xBvE?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" class="text-yellow-400 hover:underline">🔗 Live Demo</a> |
-                    <a href="https://github.com/Temidee2" class="text-yellow-400 hover:underline">💻 GitHub Code</a>
-                </div>
-            </div>
-        </div>
-
-<!-- 📈 Project 5: Bitcoin analysis -->
-        <div class="project-card p-6 bg-black bg-opacity-20 rounded-lg shadow-md flex flex-col md:flex-row items-center">
-            <img src="bitcoin_analysis.png" alt="Bitcoin Analysis" class="rounded-lg shadow-md">
-            <div class="project-info text-center md:text-left mt-4 md:mt-0">
-                <h3 class="text-2xl font-semibold text-yellow-400">Bitcoin Analysis</h3>
-                <p class="text-gray-300 mt-2">This Bitcoin data analysis, visualized through Power BI, offers a comprehensive overview of the cryptocurrency's dynamic market behavior. It tracks key metrics like price trends over time, trading volume fluctuations, and market capitalization, revealing patterns and potential investment insights. By examining historical data and identifying correlations, the analysis highlights volatility, growth periods, and potential future trends. It aims to provide stakeholders with a clear understanding of Bitcoin's performance, enabling informed decisions within the evolving digital currency landscape.</p>
-                <div class="mt-3">
-                    <a href="https://www.linkedin.com/posts/temidayoomoleye_linkedinfam-activity-7160203275395293184-G0qy?utm_source=share&utm_medium=member_android&rcm=ACoAADWORsoBkRWk_yUbkVLXUGCB7SQowscyvwE" class="text-yellow-400 hover:underline">🔗 Live Demo</a> |
-                    <a href="https://github.com/Temidee2" class="text-yellow-400 hover:underline">💻 GitHub Code</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ✅ EDUCATION BACKGROUND SECTION -->
-  <section id="education" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg text-center fade-in">
-    <h2 class="text-3xl font-bold">Education Background</h2>
-    <p class="mt-4 text-lg md:text-xl">B.Sc. in Chemistry | Obafemi Awolowo University, Nigeria</p>
-    <div class="mt-6">
-      <a href="cv.pdf" download class="bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 pulse-hover transition-all">📄 Download My CV</a>
+      
+      <div class="education-item">
+        <h3>Bsc Chemistry</h3>
+        <p>Obafemi Awolowo University, Nigeria</p>
+        <a href="cv.pdf" target="_blank" download class="small-link">Download CV</a>
+     </div>
+      </div>
     </div>
   </section>
 
-  <!-- ✅ CERTIFICATION SECTION -->
-  <section id="education" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg text-center fade-in">
-    <h2 class="text-3xl font-bold">Certification</h2>
-    <p class="mt-4 text-lg md:text-xl">Certificate of Completion | Quantum Analytics, Nigeria</p>
-    <p class="mt-2">Specialized in Excel, Power BI, SQL, Python and data visualization.</p>
-    <div class="mt-6">
-      <a href="certificate.png" download class="bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 pulse-hover transition-all">📄 View Certificate</a>
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications-container">
+      <div class="certification-item">
+        <h3>Web Development (Ongoing)</h3>
+        <p>Power Learn Project, Africa</p>
+        <a href="certificate.png" target="_blank" class="small-link">View Certificate</a>
+      </div>
+     
+      <div class="certification-item">
+        <h3>Certificate of Completion, Data Analysis</h3>
+        <p>Quantum Analytics, Nigeria</p>
+        <a href="certificate.png" target="_blank" class="small-link">View Certificate</a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
+  <!-- Contact Section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-flex">
+    <p>Feel free to contact me @</p>
+    <div class="email-box">
+      <a href="mailto:tomoleye34@gmail.com" class="btn">tomoleye34@gmail.com</a>
+    </div>
+  </div>
+</section>
 
-    <!-- ✅ CONTACT FORM -->
-    <section id="contact" class="max-w-4xl mx-auto mt-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-center">Contact Me</h2>
-        <form id="contactForm" class="mt-4 flex flex-col space-y-4">
-            <input type="text" id="name" placeholder="Your Name" class="p-4 rounded-lg bg-black bg-opacity-20">
-            <input type="email" id="email" placeholder="Your Email" class="p-4 rounded-lg bg-black bg-opacity-20">
-            <textarea id="message" placeholder="Your Message" class="p-4 rounded-lg bg-black bg-opacity-20"></textarea>
-            <button type="submit" class="bg-yellow-400 p-4 rounded-lg text-black font-bold hover:bg-yellow-300">Send Message</button>
-        </form>
-    </section>
+ 
+  <!-- Footer Section -->
+  <footer>
+    <div class="socials">
+      
+      <a href="https://www.facebook.com/Temmy4t" target="_blank"><i class="fab fa-facebook text-white text-2xl"></i></a>
+      <a href="https://x.com/temidee_leye" target="_blank"><i class="fab fa-twitter text-white text-2xl"></i></a>
+      <a href="https://www.instagram.com/temmie_rayo?utm_source=qr&igsh=OTd5eGtwdG55d2hu" target="_blank"><i class="fab fa-instagram text-white text-2xl"></i></a>
+      <a href="https://www.linkedin.com/in/temidayoomoleye?trk=contact-info" target="_blank"><i class="fab fa-linkedin text-white text-2xl"></i></a>
+      <a href="https://github.com/Temidee2" target="_blank"><i class="fab fa-github text-white text-2xl"></i></a>
 
-    <!-- ✅ FOOTER -->
-    <footer class="w-full p-6 bg-black bg-opacity-60 flex justify-center space-x-6">
-        <footer class="fixed bottom-0 w-full p-4 bg-black bg-opacity-60 flex justify-center space-x-4">
-            <a href="https://www.facebook.com/Temmy4t" target="_blank"><i class="fab fa-facebook text-white text-2xl"></i></a>
-            <a href="https://x.com/temidee_leye" target="_blank"><i class="fab fa-twitter text-white text-2xl"></i></a>
-            <a href="https://www.instagram.com/temmie_rayo?utm_source=qr&igsh=OTd5eGtwdG55d2hu" target="_blank"><i class="fab fa-instagram text-white text-2xl"></i></a>
-            <a href="https://www.linkedin.com/in/temidayoomoleye?trk=contact-info" target="_blank"><i class="fab fa-linkedin text-white text-2xl"></i></a>
-    </footer>
+    </div>
+    <p>&copy; 2025 Temidayo Omoleye</p>
+  </footer>
 
-    <!-- ✅ JavaScript for Menu -->
-    <script>
-        document.getElementById("menu-btn").addEventListener("click", function() {
-            document.getElementById("nav-menu").classList.toggle("hidden");
-        });
-    </script>
-
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
