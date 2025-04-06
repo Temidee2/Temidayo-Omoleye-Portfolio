@@ -47,6 +47,7 @@ This portfolio website was designed and developed to showcase my work and skills
 
 ## Project Structure
 Temidayo-Omoleye-Portfolio-website/ ├── 
+
 index.html           
 lear_more.html      
 styles.css        
